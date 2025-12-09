@@ -1,0 +1,5 @@
+Synthetic 2-d data with N=5000 vectors and k=15 Gaussian clusters
+
+https://cs.joensuu.fi/sipu/datasets/
+
+P. Fränti and O. Virmajoki, "Iterative shrinking method for clustering problems", Pattern Recognition, 39 (5), 761-765, May 2006.

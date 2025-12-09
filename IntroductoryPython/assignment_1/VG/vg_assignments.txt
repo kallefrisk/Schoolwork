@@ -1,0 +1,24 @@
+8. Change
+    - Input all the variables as floats.
+    - I calculate the change you should recieve.
+    - Using integer-division I compute the amount of 1000 bills you should recieve,
+    and using modular division I compute the remaining change.
+    - I repeat this process for all bills and coins, going down in bill/coin value.
+    - And lastly I print the results.
+
+14. Tax
+    - Input the salary
+    - Firstly check if the salary is positive
+    - Next check the value of the salary
+    - Depending on the value, compute the tax differently
+    - Round the tax to nearest correct integer
+    - Print the results
+
+15. Squarecolor
+    - input the square as letter and number (e.g. a1, g4, k9)
+    - split the input into two variables, one for the letter and one for the number
+    - check if the letter is acceptable (a-h); if not then square is outside the board (not good)
+    - depending on if the number is even or odd it fits into different lists with 
+    acceptable values (1-8); if outside then square is outside the board (not good)
+    - Depending on the letter and number the result is either white or black
+    - Lastly print the results
