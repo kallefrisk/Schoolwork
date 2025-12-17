@@ -7,12 +7,12 @@ def long_run_proportion(lamda, mu, n):
 
 
 def expected_time_i(lamda, mu, i):
-    return (1 - (mu/lamda)**(i))/(lamda - mu)
+    return (1 - (mu/lamda)**(i + 1))/(lamda - mu)
 
 
 lamda = 1
-mu = 1.3
-stop_time = 10000
+mu = 1.5
+stop_time = 100000
 queue = 0
 time = 0
 time_n_customers = 0
@@ -21,7 +21,7 @@ timestamps = [0]
 queue_length = [0]
 n = 0
 from_k = 0
-to_n = 4
+to_n = 3
 coming_from_k = False
 times_arrived = 0
 
