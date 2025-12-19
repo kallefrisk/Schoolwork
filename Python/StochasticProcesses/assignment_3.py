@@ -101,13 +101,13 @@ print(f'\nFraction of time when {n} customers were in the queue: {time_n_custome
 print(f'\nThe average amount of customers in the queue: {expected_value}. Expected average: {lamda/(mu-lamda)}.')
 print(f'\nAverage time to reach {to_n} customers from {from_k} customers: {total_time_to_n_customers/times_arrived}. Expected time: {expected_time_i_queue(lamda, mu, to_n)}.\n')
 
-# plt.figure(1, [16, 8])
-# plt.subplot(1, 2, 1)
-# plt.stairs(queue_length, timestamps, label='customers')
-# plt.plot(timestamps, expected_value_vector, 'r-', label='mean')
-# plt.xlabel('time')
-# plt.ylabel('# of customers')
-# plt.legend()
+plt.figure(1, [16, 8])
+plt.subplot(1, 2, 1)
+plt.stairs(queue_length, timestamps, label='customers')
+plt.plot(timestamps, expected_value_vector, 'r-', label='mean')
+plt.xlabel('time')
+plt.ylabel('# of customers')
+plt.legend()
 
 
 # PROBLEM 2
@@ -156,6 +156,7 @@ while time < stop_time:
         wolves += 1
 
     else:
+
         wolves -= 1
 
     # Make sure wolves stays non-negative
@@ -181,10 +182,10 @@ print(f'\nFraction of time when {n} amount of wolves were in the preserve: {time
 print(f'\nThe average number of wolves in the preserve: {expected_value}. Expected average: {lamda/(mu-lamda)}.')
 print(f'\nAverage time to reach {to_n} wolves from {from_k} wolves: {total_time_to_n_wolves/times_arrived}. Expected time: {expected_time_i_wolves(lamda, mu, to_n)}.\n')
 
-# plt.subplot(1, 2, 2)
-# plt.stairs(wolf_population, timestamps, label='wolves')
-# plt.plot(timestamps, expected_value_vector, 'r-', label='mean')
-# plt.xlabel('time')
-# plt.ylabel('wolves')
-# plt.legend()
-# plt.show()
+plt.subplot(1, 2, 2)
+plt.stairs(wolf_population, timestamps, label='wolves')
+plt.plot(timestamps, expected_value_vector, 'r-', label='mean')
+plt.xlabel('time')
+plt.ylabel('wolves')
+plt.legend()
+plt.show()
