@@ -1,4 +1,4 @@
-package Java.WolterDemo;
+package Java.Demos;
 
 import java.util.Scanner;
 
