@@ -2,10 +2,13 @@ import numpy as np
 
 pi = {0.4: 0, 0.5: 0, 0.6: 0, 0.7: 0}
 prior = np.array([0.10, 0.20, 0.44, 0.26])
+
 posterior = np.array([0, 0, 0, 0])
 trials = 10000
 
 np.random.seed(1)
+
+print(f"\nThe prior is {prior}")
 
 for _ in range(trials):
     num = np.random.uniform()
@@ -18,8 +21,8 @@ for _ in range(trials):
     else:
         pi[0.7] += 1
 
-for pi_idx in pi:
+for i, pi_idx in enumerate(pi):
     temp = np.random.binomial(n=80, p=pi_idx, size=pi[pi_idx])
-    print(np.count_nonzero(temp == 47))
+    posterior[i] = np.count_nonzero(temp == 47)
 
-print()
+print(f"\nThe posterior is now {posterior/np.sum(posterior)}\n")
