@@ -2,10 +2,10 @@ import numpy as np
 from scipy import stats
 from matplotlib import pyplot as plt
 
-alpha = int(input("Alpha = "))
-beta = int(input("Beta = "))
+alpha = float(input("Alpha = "))
+beta = float(input("Beta = "))
 
-x = np.linspace(0, 1, 1000)
+x = np.linspace(0, 1, 10000)
 y = stats.beta.pdf(x, alpha, beta)
 
 plt.figure()
