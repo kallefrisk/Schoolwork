@@ -25,12 +25,13 @@ penguin_model_1 <- stan_glm(
 mcmc_trace(penguin_model_1, size = 0.1)
 mcmc_dens_overlay(penguin_model_1)
 mcmc_acf(penguin_model_1)
-
-tidy(penguin_model_1, effects = c("fixed", "aux"),
-     conf.int = TRUE, conf.level = 0.95)
+pp_check(penguin_model_1, alpha = 1)
 # The MCMC-simulations all have good acceptance rates and look stable.
 # We see that the regression converges nicely in all chains
 # and that our model captures the features nicely.
+
+tidy(penguin_model_1, effects = c("fixed", "aux"),
+     conf.int = TRUE, conf.level = 0.95)
 
 penguins_bayes %>%
   add_epred_draws(penguin_model_1, ndraws = 50) %>%
@@ -49,8 +50,8 @@ as.data.frame(penguin_model_1) %>%
 # Here it is important to know that the different parameters have different interpretations
 # The Intercept is as it says, the intercept of the line with the y-axis
 # The flipper_length_mm parameter suggests that the penguins weight increases with ~40g/mm flipper
-# The speciesChinstrap parameter says that the chinstrap is on average 207g lighter
-# The speciesGentoo parameter says that the gentoo is on average 265g heavier
+# The speciesChinstrap parameter says that the Chinstrap is on average 207g lighter
+# The speciesGentoo parameter says that the Gentoo is on average 265g heavier
 
 body_mass_prediction <- posterior_predict(
   penguin_model_1,
