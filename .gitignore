@@ -1,3 +1,5 @@
 test*
 .Rproj.user
 .positai
+
+**/data/MNIST
